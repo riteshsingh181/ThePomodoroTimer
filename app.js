@@ -28,3 +28,20 @@ time.addEventListener("click", ()=>{
     timeEdit.style.display = "block";
 })
 
+minutesInp.addEventListener("change", (event)=>{
+    let minValue = minutesInp.value;
+    minutes.innerText = minValue;
+})
+
+secondsInp.addEventListener("change", (event)=>{
+    let secValue = secondsInp.value;
+    seconds.innerText = secValue;
+})
+
+for(input of timeEditInputs){
+    input.addEventListener("keypress", (event)=>{
+        if(event.key == "Enter"){
+            timeEdit.style.display = "none";
+        }
+    });
+}
