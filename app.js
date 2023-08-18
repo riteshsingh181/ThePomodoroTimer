@@ -12,3 +12,19 @@ console.log(minutes);
 console.log(timeEdit);
 console.log(timeEditInputs);
 
+document.addEventListener("keypress", (event)=>{
+    if(event.key == "Enter"){
+        timeEdit.style.display = "none";
+    }
+})
+
+timeEdit.addEventListener("keypress", (event)=>{
+    if(event.key == "Enter"){
+        timeEdit.style.display = "none";
+    }
+})
+
+time.addEventListener("click", ()=>{
+    timeEdit.style.display = "block";
+})
+
