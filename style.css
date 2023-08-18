@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins';
+    background: url(mountainsDark.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.header{
+    margin-top: 25px;
+    width: 90%;
+    display: flex;
+    justify-content: right;   
+    align-items: center;
+}
+
+.modeText{
+    margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: 0.25s ease;
+}
+
+
+.modeText h3{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.01rem;
+    opacity: 0.75;
+    cursor: default;
+}
+
+.btn-group{
+    background-color: gold;
+    width: 65px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+}
+
+.btn-group i{
+    font-size: 1.85rem;
+}
+
+#light i{
+    font-size: 1.5rem;
+    display: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    height: 90%;
+    margin-bottom: 20px;
+}
+
+.timer-btns button{
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 15px;
+    border: 1.75px solid rgb(235, 235, 235);
+    cursor: pointer;
+    border-radius: 35px;
+    padding: 10px 30px;
+    transition: 0.2s;
+    opacity: 0.75;
+}
+
+button.active{
+    opacity: 1;
+}
+
+#pomodoro-btn{
+    background-color: white;
+    color: black;
+}
+
+.timer-btns button:hover{
+    background-color: white;
+    color: black;
+    opacity: 1;
+}
+
+h1{
+    font-size: 11rem;
+    color: white;
+    text-align: center;
+    cursor: text;
+    transition: 0.8s;
+    display: inline-block;
+}
+
+.time div{
+    display: inline-block;
+    transform: translateY(-15px);
+    margin: 0 15px;
+    font-size: 11rem;
+    font-weight: 500;
+}
+
+.time-edit{
+    position: fixed;
+    padding: 45px 50px;
+    background-color: rgba(0, 0, 0);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    display: none;
+}
+
+.time-edit input{
+    padding: 0;
+    width: 280px;
+    font-size: 12rem;
+    text-align: center;
+    border: none;
+    font-family: 'Poppins';
+    color: white;
+    background: none;
+    border-radius: 5px;
+    font-weight: 600;
+
+}
+
+.time-edit div{
+    color: white;
+    font-size: 12rem;
+    font-weight: 600;
+    display: inline-block;
+    transform: translateY(-20px);
+}
+
+.time-edit input::placeholder{
+    color: white;
+    font-weight: 600;
+}
+
+.time{
+    padding: 0px 50px;
+    border-radius: 50px;
+}
+
+h1:hover{
+    opacity: 0.75;
+    transform: scale(1.03);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+i{
+    color: white;
+    font-size: 2.5rem;
+    background: none;
+}
+
+button{
+    background: none;
+    border: none;
+    font-family: 'Poppins';
+    color: black;
+}
+
+.buttons button{
+    cursor: pointer;
+}
+
+#start{
+    background-color: white;
+    border-radius: 25px;
+    padding: 8px 35px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: 3px solid white;
+    transition: 0.2s ease;
+}
+
+#start:hover{
+    border: 3px solid white;
+    background: none;
+    color: white;
+}
+
+#reset{
+    transform: translateY(2px);
+}
+
+#settings{
+    transform: scale(0.95);
+}
+
+
+
+
+.light{
+    color: white;
+}
+
+.dark{
+    color: black;
+}
+
+button.circle.dark{
+    background-color: black;
+}
