@@ -45,3 +45,23 @@ for(input of timeEditInputs){
         }
     });
 }
+
+async function timer(){
+    if(started == false){
+        let secondsVal = seconds.innerText;
+        if(secondsVal == "00"){
+            await secondsMinus(secondsVal);
+        };
+        await secondsMinus(secondsVal);
+    }
+}
+
+function secondsMinus(secondsVal){
+    secondsVal--;
+}
+
+
+startBtn.addEventListener("click", ()=>{
+    timer();
+    started = true;
+});
