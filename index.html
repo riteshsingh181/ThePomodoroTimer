@@ -6,6 +6,7 @@
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="clock.png" width="20px">
 </head>
 <body>
     <div class="main">
@@ -25,18 +26,18 @@
         </div>
         <div class="container">
             <div class="time-edit">
-                <input type="text" placeholder="50" id="minutesInp">
+                <input type="text" id="minutesInp" value="25">
                 <div>:</div>
-                <input type="text" placeholder="00" id="secondsInp">
+                <input type="text" id="secondsInp" value="00">
             </div>
             <div class="timer-btns">
-                <button class="active light" id="pomodoro-btn">pomodoro</button>
+                <button class="active light" id="pomodoro">pomodoro</button>
                 <button class="light" id="shortbreak">short break</button>
                 <button class="light" id="longbreak">long break</button>
             </div>
             <div class="time">
                 <button id="time-heading">
-                    <h1 id="minutes">50</h1><div class="light">:</div><h1 id="seconds">00</h1>
+                    <h1 id="minutes">25</h1><div class="light">:</div><h1 id="seconds">00</h1>
                 </button>
             </div>
             <div class="buttons">
