@@ -45,6 +45,9 @@ body{
     letter-spacing: 0.01rem;
     opacity: 0.75;
     cursor: default;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 8px 12px;
+    border-radius: 10px;
 }
 
 .btn-group{
@@ -101,9 +104,6 @@ body{
 
 button.active{
     opacity: 1;
-}
-
-#pomodoro-btn{
     background-color: white;
     color: black;
 }
@@ -117,10 +117,18 @@ button.active{
 h1{
     font-size: 11rem;
     color: white;
-    text-align: center;
     cursor: text;
     transition: 0.8s;
     display: inline-block;
+    width: 250px;
+}
+
+h1#minutes{
+    text-align: right;
+}
+
+h1#seconds{
+    text-align: left;
 }
 
 .time div{
@@ -139,8 +147,9 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 20px;
     display: none;
+    box-shadow: 0px 0.1px 50px gold;
 }
 
 .time-edit input{
@@ -163,11 +172,13 @@ h1{
     font-weight: 600;
     display: inline-block;
     transform: translateY(-20px);
+    opacity: 0.75;
 }
 
 .time-edit input::placeholder{
     color: white;
     font-weight: 600;
+    opacity: 0.75;
 }
 
 .time{
@@ -175,7 +186,11 @@ h1{
     border-radius: 50px;
 }
 
-h1:hover{
+#time-heading{
+    transition: 0.25s;
+}
+
+#time-heading:hover{
     opacity: 0.75;
     transform: scale(1.03);
 }
@@ -201,6 +216,12 @@ button{
 
 .buttons button{
     cursor: pointer;
+    opacity: 0.75;
+    transition: 0.5s ease;
+}
+
+.buttons button:hover{
+    opacity: 1;
 }
 
 #start{
@@ -211,6 +232,7 @@ button{
     font-weight: 500;
     border: 3px solid white;
     transition: 0.2s ease;
+    width: 150px;
 }
 
 #start:hover{
@@ -220,7 +242,7 @@ button{
 }
 
 #reset{
-    transform: translateY(2px);
+    transform: translateY(2px) rotate(30deg);
 }
 
 #settings{
@@ -240,4 +262,46 @@ button{
 
 button.circle.dark{
     background-color: black;
+}
+
+.rotate{
+    transform: rotate(-360deg);
+    transition: 1.5s ease;
+}
+
+
+.startingpage{
+    width: 100vw;
+    height: 100vh;
+    transition: 1s ease;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+
+.startingpage h3{
+    font-family: 'Poppins';
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+}
+
+.startingpage p{
+    font-family: 'Poppins';
+    font-size: 1.35rem;
+    text-align: center;
+    color: gold;
+    opacity: 0.75;
+    font-weight: 300;
+    letter-spacing: 0.02rem;
+    margin-top: 15px;
+}
+
+.displayNone{
+    display: none;
+    z-index: -5;
 }
