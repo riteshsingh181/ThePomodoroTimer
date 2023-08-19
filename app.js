@@ -18,6 +18,7 @@ let modeText = document.querySelector(".modeText h3");
 
 let startBtn = document.querySelector("button#start");
 let started = false;
+let id;
 
 console.log(minutes);
 console.log(timeEdit);
@@ -49,7 +50,7 @@ secondsInp.addEventListener("change", (event)=>{
     seconds.innerText = secValue;
 })
 
-/* for(input of timeEditInputs){
+ for(input of timeEditInputs){
     input.addEventListener("keypress", (event)=>{
         if(event.key == "Enter"){
             timeEdit.style.display = "none";
@@ -57,26 +58,42 @@ secondsInp.addEventListener("change", (event)=>{
     });
 }
 
-async function timer(){
+startBtn.addEventListener("click", (event)=>{
+    console.log("start btn was clicked.")
     if(started == false){
-        let secondsVal = seconds.innerText;
-        if(secondsVal == "00"){
-            await secondsMinus(secondsVal);
-        };
-        await secondsMinus(secondsVal);
-        //still working on it
+        start();
+        started = true;
+    } else if (started == true){
+        pause();
+        started = false;
     }
+})
+
+function start(){
+    startBtn.innerText = "pause";
+    startTimer();
 }
 
-function secondsMinus(secondsVal){
-    secondsVal--;
+function startTimer(){
+    let sec = parseInt(seconds.innerText);
+    let min = parseInt(minutes.innerText);
+    let totalSec = (min*60) + sec;
+    id = setInterval(() => {
+        totalSec--;
+        let secScreen = totalSec % 60;
+        if(secScreen < 10){
+            secScreen = `0${secScreen}`;
+        }
+        seconds.innerText = secScreen;
+        let minScreen = Math.floor(totalSec / 60);
+        minutes.innerText = minScreen;
+    }, 1000);
 }
 
-
-startBtn.addEventListener("click", ()=>{
-    timer();
-    started = true;
-}); */
+function pause(){
+    startBtn.innerText = "start";
+    clearInterval(id);
+}
 
 toggleBtn.addEventListener("click", ()=>{
     if(mode == "dark"){
