@@ -53,6 +53,7 @@ async function timer(){
             await secondsMinus(secondsVal);
         };
         await secondsMinus(secondsVal);
+        //still working on it
     }
 }
 
