@@ -1,4 +1,5 @@
 let body = document.querySelector("body");
+let container = document.querySelector(".container");
 
 let time = document.querySelector("#time-heading");
 let timeEdit = document.querySelector(".time-edit");
@@ -79,17 +80,17 @@ startBtn.addEventListener("click", ()=>{
 
 toggleBtn.addEventListener("click", ()=>{
     if(mode == "dark"){
-        body.style.opacity = "0.5";
-        body.style.transform = "scale(1.1)";
+        container.style.opacity = "0.5";
+        container.style.transform = "scale(1.1)";
         setTimeout(() => {
-            body.style= "";
+            container.style= "";
             light();
         }, 250);
     } else if(mode == "light"){
-        body.style.opacity = "0.5";
-        body.style.transform = "scale(1.1)";
+        container.style.opacity = "0.5";
+        container.style.transform = "scale(1.1)";
         setTimeout(() => {
-            body.style = "";
+            container.style = "";
             dark();
         }, 250);
     }
