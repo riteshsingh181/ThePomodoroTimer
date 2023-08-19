@@ -80,14 +80,16 @@ startBtn.addEventListener("click", ()=>{
 toggleBtn.addEventListener("click", ()=>{
     if(mode == "dark"){
         body.style.opacity = "0.5";
+        body.style.transform = "scale(1.1)";
         setTimeout(() => {
-            body.style.opacity = "1";
+            body.style= "";
             light();
         }, 250);
     } else if(mode == "light"){
         body.style.opacity = "0.5";
+        body.style.transform = "scale(1.1)";
         setTimeout(() => {
-            body.style.opacity = "1";
+            body.style = "";
             dark();
         }, 250);
     }
