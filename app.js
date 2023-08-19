@@ -107,3 +107,30 @@ function toggleBtnFuncLeft(btn, sun, moon){
     sun.style.display = "none";
     moon.style.display = "inline-block";
 }
+
+function backgroundChange(){
+    if(mode == "dark"){
+        body.style.backgroundImage = "url('mountainsLight.jpg')";
+    } else if (mode == "light"){
+        body.style.backgroundImage = "url('mountainsDark.jpg')";
+    }
+}
+
+function light(){
+    toggleBtnFuncRight(toggleBtn, lightSun, darkMoon);
+    lightSun.style.color = "white";
+    toggleBtn.style.backgroundColor = "white";
+    btnGroup.style.backgroundColor = "black";
+    backgroundChange();
+    modeText.innerText = "Light Mode";
+    mode = "light";
+}
+
+function dark(){
+    toggleBtnFuncLeft(toggleBtn, lightSun, darkMoon);
+    toggleBtn.style.backgroundColor = "black";
+    btnGroup.style.backgroundColor = "gold";
+    backgroundChange();
+    modeText.innerText = "Dark Mode";
+    mode = "dark";
+}
