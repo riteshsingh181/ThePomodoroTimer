@@ -96,3 +96,14 @@ toggleBtn.addEventListener("click", ()=>{
 })
 
 
+function toggleBtnFuncRight(btn, sun, moon){
+    btn.style.left = "55px";
+    sun.style.display = "inline-block";
+    moon.style.display = "none";
+}
+
+function toggleBtnFuncLeft(btn, sun, moon){
+    btn.style.left = "5px";
+    sun.style.display = "none";
+    moon.style.display = "inline-block";
+}
