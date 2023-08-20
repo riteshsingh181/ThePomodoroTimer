@@ -99,7 +99,7 @@ function initializeSec(){
 }
 
 time.addEventListener("click", ()=>{
-    timeEdit.style.display = "block";
+    timeEdit.style.display = "flex";
 })
 
 
@@ -203,8 +203,8 @@ function backgroundChange(){
 
 function light(){
     toggleBtnFuncRight(circle, lightSun, darkMoon);
-    lightSun.style.color = "white";
-    circle.style.backgroundColor = "white";
+    lightSun.style.color = "#f5cbbb";
+    circle.style.backgroundColor = "#f5cbbb";
     toggleBtn.style.backgroundColor = "black";
     backgroundChange();
     modeText.innerText = "Light Mode";
