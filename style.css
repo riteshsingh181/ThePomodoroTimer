@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 body{
@@ -35,7 +36,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    transition: 0.25s ease;
+    transition: 0.5s ease;
 }
 
 
@@ -48,6 +49,7 @@ body{
     background-color: rgba(0, 0, 0, 0.9);
     padding: 8px 12px;
     border-radius: 10px;
+    transition: 0.5s ease;
 }
 
 .btn-group{
@@ -60,6 +62,7 @@ body{
     align-items: center;
     position: relative;
     height: 30px;
+    transition: 0.75s;
 }
 
 .circle{
@@ -77,7 +80,7 @@ body{
 #light i{
     font-size: 1.5rem;
     display: none;
-    transform: translateX(-5px);
+    transform: translateX(0px);
 }
 
 .container{
@@ -98,7 +101,7 @@ body{
     cursor: pointer;
     border-radius: 35px;
     padding: 10px 30px;
-    transition: 0.2s;
+    transition: 0.5s ease;
     opacity: 0.75;
 }
 
@@ -137,25 +140,29 @@ h1#seconds{
     margin: 0 15px;
     font-size: 11rem;
     font-weight: 500;
+    transition: 0.5s;
 }
 
 .time-edit{
     position: fixed;
-    padding: 45px 50px;
+    padding: 10px 15px;
     background-color: rgba(0, 0, 0);
     z-index: 5;
-    display: flex;
+    height: 65vh;
+    width: 70vw;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     display: none;
     box-shadow: 0px 0.1px 50px gold;
+    transition: 0.25s ease;
 }
 
 .time-edit input{
     padding: 0;
-    width: 280px;
-    font-size: 12rem;
+    margin: 0 10px;
+    width: 250px;
+    font-size: 10rem;
     text-align: center;
     border: none;
     font-family: 'Poppins';
@@ -163,26 +170,29 @@ h1#seconds{
     background: none;
     border-radius: 5px;
     font-weight: 600;
-
+    transition: 0.5s ease;
 }
 
 .time-edit div{
     color: white;
-    font-size: 12rem;
+    font-size: 8.5rem;
     font-weight: 600;
-    display: inline-block;
-    transform: translateY(-20px);
+    display: inline-flex;
+    transform: translateY(-15px);
     opacity: 0.75;
+    transition: 0.5s ease;
 }
 
 .time-edit input::placeholder{
     color: white;
     font-weight: 600;
     opacity: 0.75;
+    display: inline-flex;
 }
 
 .time{
     padding: 0px 50px;
+    margin: 25px 0;
     border-radius: 50px;
 }
 
@@ -199,6 +209,7 @@ h1#seconds{
     display: flex;
     justify-content: space-evenly;
     width: 60%;
+    align-content: center;
 }
 
 i{
@@ -227,7 +238,7 @@ button{
 #start{
     background-color: white;
     border-radius: 25px;
-    padding: 8px 35px;
+    padding: 8px 10px;
     font-size: 1.5rem;
     font-weight: 500;
     border: 3px solid white;
@@ -304,4 +315,330 @@ button.circle.dark{
 .displayNone{
     display: none;
     z-index: -5;
+}
+
+
+@media (max-width : 900px){
+    h1{
+        font-size: 9rem;
+        width: 200px;
+    }
+    .time div{
+        font-size: 8rem;
+        width: 45px;
+        transform: translateY(-20px);
+    }
+    #start{
+        width: 120px;
+        font-size: 1.2rem;
+    }
+    .buttons i{
+        font-size: 2rem;
+    }
+    .timer-btns button{
+        font-size: 0.9rem;
+        padding: 5px 20px;
+        margin: 0 10px;
+    }
+    .btn-group{
+        transform: scale(0.85);
+    }
+    .startingpage h3{
+        font-size: 2.75rem;
+    }
+    .startingpage p{
+        font-size: 1.1rem;
+    }
+    .modeText h3{
+        font-size: 0.75rem;
+    }
+    .modeText{
+        margin-left: 5px;
+    }
+    .time{
+        margin: 20px 0;
+    }
+    .time-edit{
+        padding: 0 10px;
+    }
+    .time-edit input{
+        font-size: 8rem;
+        width: 200px;
+    }
+    .time-edit div{
+        font-size: 7rem;
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width : 650px){
+    h1{
+        font-size: 8rem;
+        width: 175px;
+    }
+    .time{
+        padding: 0 35px;
+    }
+    .time div{
+        font-size: 6rem;
+        width: 30px;
+        transform: translateY(-30px);
+    }
+    #start{
+        width: 100px;
+        font-size: 1rem;
+    }
+    .buttons i{
+        font-size: 1.5rem;
+    }
+    .timer-btns button{
+        font-size: 0.8rem;
+        padding: 3px 15px;
+        margin: 0 10px;
+    }
+    .btn-group{
+        transform: scale(0.75);
+    }
+    .startingpage h3{
+        font-size: 2.25rem;
+    }
+    .startingpage p{
+        font-size: 1.05rem;
+    }
+    .modeText h3{
+        font-size: 0.65rem;
+    }
+    .modeText{
+        margin-left: 3px;
+    }
+    .time{
+        margin: 12px 0;
+    }
+    .time-edit input{
+        font-size: 6.5rem;
+        width: 150px;
+    }
+    .time-edit div{
+        font-size: 6rem;
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width : 600px){
+    h1{
+        font-size: 7rem;
+        width: 150px;
+    }
+    .time{
+        padding: 0 25px;
+    }
+    .time div{
+        font-size: 4.5rem;
+        width: 30px;
+        transform: translateY(-35px);
+    }
+    .startingpage h3{
+        font-size: 2rem;
+    }
+    .startingpage p{
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width : 540px){
+    h1{
+        font-size: 6.25rem;
+        width: 125px;
+    }
+    .startingpage h3{
+        font-size: 2rem;
+    }
+    .startingpage p{
+        font-size: 0.9rem;
+    }
+    .modeText h3{
+        font-size: 0.6rem;
+    }
+    .modeText{
+        margin-left: 3px;
+    }
+    .time{
+        margin: 12px 0;
+        padding: 0 5px;
+    }
+    .btn-group{
+        transform: scale(0.65);
+    }
+    .time div{
+        font-size: 4rem;
+        width: 30px;
+        transform: translateY(-30px);
+    }
+    #start{
+        padding: 3px 5px;
+        width: 85px;
+    }
+    .buttons{
+        width: 65%;
+    }
+    .time-edit{
+        height: 40vh;
+        width: 75vw;
+    }
+    .time-edit input{
+        font-size: 5rem;
+        width: 150px;
+    }
+    .time-edit div{
+        font-size: 4rem;
+        transform: translateY(-5px);
+    }
+    .startingpage h3{
+        font-size: 1.5rem;
+    }
+    .startingpage p{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 450px){
+    .timer-btns button{
+        font-size: 0.75rem;
+        padding: 3px 10px;
+        margin: 0 5px;
+    }
+    .time-edit{
+        height: 40vh;
+        width: 75vw;
+    }
+    .time-edit input{
+        font-size: 4.5rem;
+        width: 120px;
+    }
+    .time-edit div{
+        font-size: 3rem;
+        transform: translateY(-5px);
+    }
+    .startingpage h3{
+        font-size: 1.2rem;
+    }
+    .startingpage p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px){
+    h1{
+        font-size: 5.5rem;
+        width: 120px;
+    }
+    .startingpage h3{
+        font-size: 1.1rem;
+    }
+    .startingpage p{
+        font-size: 0.75rem;
+    }
+    .time div{
+        font-size: 4rem;
+        width: 15px;
+        transform: translateY(-25px);
+        margin: 0 8px;
+    }
+    .btn-group{
+        transform: scale(0.5);
+    }
+    .modeText h3{
+        font-size: 0.45rem;
+    }
+    .modeText{
+        margin-left: 0px;
+    }
+    .timer-btns button{
+        padding: 3px 8px;
+        margin: 0 3px;
+    }
+}
+
+@media (max-width: 360px){
+    h1{
+        font-size: 4rem;
+        width: auto;
+    }
+    .time{
+        padding: 0;
+    }
+    .time div{
+        font-size: 3rem;
+        width: 10px;
+        transform: translateY(-15px);
+        margin: 0 5px;
+    }
+    .timer-btns{
+        display: flex;
+        flex-direction: column;
+    }
+    .timer-btns button{
+        margin-bottom: 10px;
+        width: 175px
+    }
+    .container{
+        margin-bottom: 120px;
+    }
+
+    #start{
+        font-size: 0.75rem;
+    }
+    .buttons{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .buttons i{
+        font-size: 1rem;
+    }
+    .time-edit{
+        height: 45vh;
+        width: 75vw;
+    }
+    .time-edit input{
+        font-size: 3.5rem;
+        width: 85px;
+    }
+    .time-edit div{
+        font-size: 2.5rem;
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 275px){
+    .time-edit{
+        height: 30vh;
+        width: 75vw;
+    }
+    .time-edit input{
+        font-size: 3rem;
+        width: 75px;
+    }
+    .time-edit div{
+        font-size: 2rem;
+        transform: translateY(-5px);
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .time div{
+        font-size: 2rem;
+    }
+    .timer-btns button{
+        width: 150px;
+        font-size: 0.5rem;
+    }
+    #start{
+        font-size: 0.5rem;
+    }
+    .startingpage h3{
+        font-size: 0.85rem;
+    }
+    .startingpage p{
+        font-size: 0.5rem;
+    }
 }
