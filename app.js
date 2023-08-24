@@ -2,6 +2,9 @@ let body = document.querySelector("body");
 let main = document.querySelector(".main");
 let container = document.querySelector(".container");
 
+let tick = document.querySelector("audio#tick");
+tick.loop = true;
+
 let time = document.querySelector("#time-heading");
 let timeEdit = document.querySelector(".time-edit");
 let timeEditInputs = document.querySelectorAll("input");
@@ -134,6 +137,7 @@ startBtn.addEventListener("click", (event)=>{
 function start(){
     startBtn.innerText = "pause";
     startTimer();
+    tick.play();
 }
 
 function startTimer(){
@@ -160,6 +164,7 @@ function pause(){
     startBtn.innerText = "start";
     clearInterval(id);
     started = false;
+    tick.pause();
 }
 
 toggleBtn.addEventListener("click", ()=>{
